@@ -4,6 +4,8 @@ import com.subway.sandwiches.ChickenFillet;
 import com.subway.sandwiches.Sandwich;
 import com.subway.sandwiches.SpicyItalian;
 import com.subway.sandwiches.Veggie;
+import com.subway.users.User;
+
 import java.util.Scanner;
 
 public class Shop {

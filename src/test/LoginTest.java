@@ -1,7 +1,7 @@
 package Tests;
 
 import com.subway.Login;
-import com.subway.User;
+import com.subway.users.User;
 import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.*;
 

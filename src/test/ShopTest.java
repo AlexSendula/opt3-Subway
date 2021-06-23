@@ -2,7 +2,7 @@ package test;
 
 import com.subway.Login;
 import com.subway.Shop;
-import com.subway.User;
+import com.subway.users.User;
 import org.junit.After;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

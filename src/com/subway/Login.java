@@ -1,5 +1,7 @@
 package com.subway;
 
+import com.subway.users.User;
+
 import java.io.File;
 
 import java.util.ArrayList;

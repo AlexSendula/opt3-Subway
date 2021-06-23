@@ -1,5 +1,7 @@
 package com.subway;
 
+import com.subway.users.User;
+
 public class Main {
 
     public static void main(String[] args) {
