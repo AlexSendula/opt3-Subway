@@ -7,9 +7,9 @@ import com.subway.sandwiches.Veggie;
 import java.util.Scanner;
 
 public class Shop {
-    Scanner scanner = new Scanner(System.in);
-
     public void order() {
+        Scanner scanner = new Scanner(System.in);
+
         System.out.println("Please choose your desired sandwich");
         System.out.println("1. Chicken Fillet");
         System.out.println("2. Spicy Pepperoni");

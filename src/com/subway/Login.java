@@ -7,9 +7,9 @@ import java.util.Scanner;
 
 public class Login {
 
-    Scanner scanner = new Scanner(System.in);
-
     public void loginAttempt() {
+        Scanner scanner = new Scanner(System.in);
+
         System.out.println("username?");
         String username = scanner.nextLine();
         System.out.println("password?");

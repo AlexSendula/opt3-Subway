@@ -3,10 +3,10 @@ package com.subway;
 import java.util.Scanner;
 
 public class Menu {
-    Scanner scanner = new Scanner(System.in);
-    private Shop shop = new Shop();
-
     public void menu() {
+        Scanner scanner = new Scanner(System.in);
+        Shop shop = new Shop();
+
         System.out.println("1. Order");
         System.out.println("2. Log out");
 
