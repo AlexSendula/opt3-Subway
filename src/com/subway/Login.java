@@ -5,6 +5,7 @@ import com.subway.users.User;
 import java.io.File;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Login {
@@ -40,11 +41,11 @@ public class Login {
     public static ArrayList<ArrayList<String>> readUsers() {
         Scanner scanner = new Scanner(System.in);
 
-        ArrayList<String> userInfo = new ArrayList<>();
+
         ArrayList<ArrayList<String>> users = new ArrayList<>();
 
         try {
-            File file = new File("src/com/subway/users.csv");
+            File file = new File("src/com/subway/users/users.csv");
             scanner = new Scanner(file);
         } catch (Exception e) {
             e.printStackTrace();
@@ -52,13 +53,11 @@ public class Login {
 
         scanner.useDelimiter("\n");
         while (scanner.hasNext()) {
-            scanner.useDelimiter(",");
-            while (scanner.hasNext()) {
-                userInfo.add(scanner.next());
-            }
+            ArrayList<String> userInfo = new ArrayList<>();
+            userInfo.addAll(Arrays.asList(scanner.next().split(",")));
+
             users.add(userInfo);
         }
-
         return users;
     }
 

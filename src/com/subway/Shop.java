@@ -25,18 +25,23 @@ public class Shop {
     }
 
     public void sandwichSelection(int selection) {
-        if (selection == 1) {
-            Sandwich sandwich = new ChickenFillet();
-            sandwich.makeSandwich();
-        } else if (selection == 2) {
-            Sandwich sandwich = new SpicyItalian();
-            sandwich.makeSandwich();
-        } else if (selection == 3) {
-            Sandwich sandwich = new Veggie();
-            sandwich.makeSandwich();
-        } else {
-            System.out.println("Bad input.");
-            User.endSession();
+        switch (selection) {
+            case 1 -> {
+                Sandwich sandwich = new ChickenFillet();
+                sandwich.makeSandwich();
+            }
+            case 2 -> {
+                Sandwich sandwich = new SpicyItalian();
+                sandwich.makeSandwich();
+            }
+            case 3 -> {
+                Sandwich sandwich = new Veggie();
+                sandwich.makeSandwich();
+            }
+            default -> {
+                System.out.println("Bad input.");
+                User.endSession();
+            }
         }
     }
 }

@@ -12,12 +12,12 @@ public class Menu {
         System.out.println("1. Order");
         System.out.println("2. Log out");
 
-        int selection = scanner.nextInt();
-        if (selection == 1) {
-            shop.order();
-            menu();
-        } else if (selection == 2) {
-            User.endSession();
+        switch (scanner.nextInt()) {
+            case 1 -> {
+                shop.order();
+                menu();
+            }
+            case 2 -> User.endSession();
         }
     }
 }

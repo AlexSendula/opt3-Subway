@@ -3,7 +3,7 @@ package com.subway.users;
 import java.util.ArrayList;
 
 public class User {
-    private String id;
+    private int id;
     private String username;
     private String password;
     private String email;
@@ -13,9 +13,9 @@ public class User {
     private static User user = null;
 
     private User(ArrayList<String> userInfo) {
-        this.id = userInfo.get(0);
-        this.username = userInfo.get(1);
-        this.password = userInfo.get(2);
+        this.id = Integer.parseInt(userInfo.get(2));
+        this.username = userInfo.get(0);
+        this.password = userInfo.get(1);
         this.email = userInfo.get(3);
         this.address = new Address(userInfo);
     }
