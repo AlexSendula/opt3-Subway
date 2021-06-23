@@ -1,4 +1,4 @@
-package Tests;
+package test;
 
 import com.subway.Login;
 import com.subway.Shop;
