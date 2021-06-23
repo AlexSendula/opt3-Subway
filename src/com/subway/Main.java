@@ -7,8 +7,8 @@ public class Main {
         try {
             login.loginAttempt();
             while (User.getSessionStatus()) {
-                Shop shop = new Shop();
-                shop.menu();
+                Menu menu = new Menu();
+                menu.menu();
             }
             System.out.println("User has logged out.");
         } catch (Exception e) {

@@ -2,6 +2,7 @@ package test;
 
 import com.subway.Login;
 import com.subway.Shop;
+import com.subway.User;
 import org.junit.After;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -14,7 +15,6 @@ public class ShopTest {
     private final ByteArrayOutputStream outContent  = new ByteArrayOutputStream();
     private final PrintStream originalOut  = System.out;
 
-
     @BeforeEach
     public void setUpStreams() {
         System.setOut(new PrintStream(outContent ));
@@ -25,11 +25,11 @@ public class ShopTest {
         System.setOut(originalOut);
     }
 
-    //De volgende drie testcases zijn Decision coverage.
     @Test
     public void menuOption1() {
         Login login = new Login();
         login.validateCredentials("user1", "123");
+        assertNotNull(User.getSessionStatus());
         Shop shop = new Shop();
 
         shop.sandwichSelection(1);
@@ -45,6 +45,7 @@ public class ShopTest {
     public void menuOption2() {
         Login login = new Login();
         login.validateCredentials("user1", "123");
+        assertNotNull(User.getSessionStatus());
         Shop shop = new Shop();
 
         shop.sandwichSelection(2);
@@ -61,6 +62,7 @@ public class ShopTest {
     public void menuOption3() {
         Login login = new Login();
         login.validateCredentials("user1", "123");
+        assertNotNull(User.getSessionStatus());
         Shop shop = new Shop();
 
         shop.sandwichSelection(3);
@@ -71,11 +73,11 @@ public class ShopTest {
                 "The sandwich is wrapped!\r\n", output);
     }
 
-    //EquavalentieKlasse
     @Test
     public void menuOptionOutOfBounds() {
         Login login = new Login();
         login.validateCredentials("user1", "123");
+        assertNotNull(User.getSessionStatus());
         Shop shop = new Shop();
 
         for (int i = -4; i < 1; i++) {
@@ -92,6 +94,4 @@ public class ShopTest {
             System.setOut(originalOut);
         }
     }
-
-
 }

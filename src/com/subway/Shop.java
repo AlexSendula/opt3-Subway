@@ -9,19 +9,6 @@ import java.util.Scanner;
 public class Shop {
     Scanner scanner = new Scanner(System.in);
 
-    public void menu() {
-        System.out.println("1. Order");
-        System.out.println("2. Log out");
-
-        int selection = scanner.nextInt();
-        if (selection == 1) {
-            order();
-            menu();
-        } else if (selection == 2) {
-            User.endSession();
-        }
-    }
-
     public void order() {
         System.out.println("Please choose your desired sandwich");
         System.out.println("1. Chicken Fillet");
