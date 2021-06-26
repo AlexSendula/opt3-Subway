@@ -45,7 +45,7 @@ public class Login {
         ArrayList<ArrayList<String>> users = new ArrayList<>();
 
         try {
-            File file = new File("src/com/subway/users/users.csv");
+            File file = new File("src/main/java/com/subway/users/users.csv");
             scanner = new Scanner(file);
         } catch (Exception e) {
             e.printStackTrace();
